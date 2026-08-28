@@ -1,6 +1,7 @@
 from datetime import datetime, timedelta
 class Urls:
     MAIN_PAGE = 'https://qa-scooter.praktikum-services.ru/'
+    DZEN_URL_PART = 'dzen.ru'
 
 FAQ_ITEMS = [
 (

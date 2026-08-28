@@ -38,3 +38,11 @@ class BasePage:
 
     def wait_invisible(self, locator):
         return WebDriverWait(self.driver, self.TIMEOUT).until(EC.invisibility_of_element_located(locator))
+
+    def switch_to_new_window(self):
+        WebDriverWait(self.driver, self.TIMEOUT).until(EC.number_of_windows_to_be(2))
+        self.driver.switch_to.window(self.driver.window_handles[-1])
+
+    def wait_url_contains(self, url_part):
+        WebDriverWait(self.driver, self.TIMEOUT).until(EC.url_contains(url_part))
+        return self.driver.current_url
