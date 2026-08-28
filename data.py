@@ -67,3 +67,15 @@ class OrderData:
         'color': 'black',
         'comment': 'Позвоните за 10 минут',
     }
+
+    SECOND = {
+        'first_name': 'Анна',
+        'last_name': 'Иванова',
+        'address': 'Москва, Тверская, 15, кв. 42',
+        'station': 'Чистые пруды',
+        'phone': '89031112233',
+        'date': get_delivery_date(3),
+        'rent_period': 'семеро суток',
+        'color': 'grey',
+        'comment': '',
+    }
