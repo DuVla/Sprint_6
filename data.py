@@ -1,3 +1,4 @@
+from datetime import datetime, timedelta
 class Urls:
     MAIN_PAGE = 'https://qa-scooter.praktikum-services.ru/'
 
@@ -50,6 +51,9 @@ FAQ_ITEMS = [
     ),
 ]
 
+def get_delivery_date(days_ahead=1):
+    return (datetime.now() + timedelta(days=days_ahead)).strftime('%d.%m.%Y')
+
 class OrderData:
 
     FIRST = {
@@ -58,4 +62,8 @@ class OrderData:
         'address': 'Москва, ул. Ленина, д. 1',
         'station': 'Сокольники',
         'phone': '+79991234567',
+        'date': get_delivery_date(1),
+        'rent_period': 'сутки',
+        'color': 'black',
+        'comment': 'Позвоните за 10 минут',
     }
